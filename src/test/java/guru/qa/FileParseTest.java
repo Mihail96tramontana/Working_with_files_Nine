@@ -18,9 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FileParseTest {
 
-    ClassLoader classLoader = FileParseTest.class.getClassLoader();
-
-    String zipClassPath = "src/test/resources/files.zip";
+    String zipClassPath = "src/test/resources/file.zip";
     String jsonClassPath = "src/test/resources/student.json";
 
     @Test
@@ -46,22 +44,15 @@ public class FileParseTest {
     }
 
     @Test
-    void csvTest() throws Exception {
-        //с помощью класс лоудера ищем зип
-        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("files.zip")).getFile());
-        //достаем нужный файл в зипе
-        ZipEntry entry = zipFile.getEntry("example.csv");
-        List<String[]> list;
-        InputStream inputStream = zipFile.getInputStream(entry);
-        //читаем csv
-        CSVReader csvReader = new CSVReader(new InputStreamReader(inputStream));
-        list = csvReader.readAll();
-        assertThat(list).contains(
-                new String[] {"teacher","lesson","date"},
-                new String[] {"Tuchs","junit","03.06"},
-                new String[] {"Eroshenko","allure","07.06"}
-        );
+    void parseCsvTest() throws Exception {
+        ZipFile zipFiles = new ZipFile(zipClassPath);
+        ZipEntry zipEntry = zipFiles.getEntry("Табличечка.csv");
+        try (InputStream inputStream = zipFiles.getInputStream(zipEntry);
+             CSVReader csv = new CSVReader(new InputStreamReader(inputStream))) {
+            List<String[]> content = csv.readAll();
+            assertThat(content.get(3)).contains("номер3");
         }
+    }
 
     @Test
     void parseJsonTest() throws Exception{
