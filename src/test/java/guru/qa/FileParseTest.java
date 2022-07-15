@@ -3,10 +3,12 @@ package guru.qa;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.xlstest.XLS;
 import com.opencsv.CSVReader;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 import java.util.zip.ZipEntry;
@@ -19,6 +21,7 @@ public class FileParseTest {
     ClassLoader classLoader = FileParseTest.class.getClassLoader();
 
     String zipClassPath = "src/test/resources/Files.zip";
+    String jsonClassPath = "src/test/resources/student.json";
 
     @Test
     void pdfTest() throws Exception {
@@ -59,4 +62,13 @@ public class FileParseTest {
                 new String[] {"Eroshenko","allure","07.06"}
         );
         }
+
+    @Test
+    void parseJsonTest() throws Exception{
+        ObjectMapper mapper = new ObjectMapper();
+        guru.qa.domain.Staff staff = mapper.readValue(Paths.get(jsonClassPath).toFile(), guru.qa.domain.Staff.class);
+        assertThat(staff.name).isEqualTo("Михаил");
+        assertThat(staff.isGoodStudent).isEqualTo("true");
+        assertThat(staff.age).isEqualTo("25");
     }
+}
