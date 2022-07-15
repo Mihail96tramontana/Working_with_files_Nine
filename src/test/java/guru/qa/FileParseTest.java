@@ -20,7 +20,7 @@ public class FileParseTest {
 
     ClassLoader classLoader = FileParseTest.class.getClassLoader();
 
-    String zipClassPath = "src/test/resources/Files.zip";
+    String zipClassPath = "src/test/resources/files.zip";
     String jsonClassPath = "src/test/resources/student.json";
 
     @Test
@@ -48,7 +48,7 @@ public class FileParseTest {
     @Test
     void csvTest() throws Exception {
         //с помощью класс лоудера ищем зип
-        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("Files.zip")).getFile());
+        ZipFile zipFile = new ZipFile(Objects.requireNonNull(classLoader.getResource("files.zip")).getFile());
         //достаем нужный файл в зипе
         ZipEntry entry = zipFile.getEntry("example.csv");
         List<String[]> list;

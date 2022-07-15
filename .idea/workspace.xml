@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd22c38-6323-4f4a-9b15-75b2fe6ca4ed" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/src/test/java/guru/qa/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/student.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/SelenideTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Files.zip" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/files.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <recent name="C:\Users\qwerty\IdeaProjects\Working_with_files_Nine\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FileParseTest.parseJsonTest">
+  <component name="RunManager" selected="Gradle.FileParseTest.pdfTest">
     <configuration name="FileParseTest.csvTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FileParseTest.pdfTest" />
         <item itemvalue="Gradle.FileParseTest.parseJsonTest" />
         <item itemvalue="Gradle.FileParseTest.csvTest" />
-        <item itemvalue="Gradle.FileParseTest.pdfTest" />
         <item itemvalue="Gradle.FileParseTest.xlsxTest" />
       </list>
     </recent_temporary>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657892794762</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test">
+      <created>1657897665428</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657897665428</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
