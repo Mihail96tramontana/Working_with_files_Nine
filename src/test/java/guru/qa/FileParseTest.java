@@ -23,7 +23,7 @@ public class FileParseTest {
     @Test
     void pdfTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("Дар.Владимир Набоков.pdf");
+        ZipEntry zipEntry = zipFiles.getEntry("1.pdf");
         InputStream inputStream = zipFiles.getInputStream(zipEntry);
         PDF pdf = new PDF(inputStream);
         assertThat(pdf.text).contains("Дар");

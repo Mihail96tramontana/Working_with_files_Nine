@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd22c38-6323-4f4a-9b15-75b2fe6ca4ed" name="Changes" comment="test" />
+    <list default="true" id="0dd22c38-6323-4f4a-9b15-75b2fe6ca4ed" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/files.zip" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.FileParseTest.pdfTest" />
+        <item itemvalue="Gradle.FileParseTest.xlsxTest" />
+        <item itemvalue="Gradle.FileParseTest.parseJsonTest" />
         <item itemvalue="Gradle.FileParseTest.parseCsvTest" />
         <item itemvalue="Gradle.FileParseTest.csvTest" />
-        <item itemvalue="Gradle.FileParseTest.parseJsonTest" />
-        <item itemvalue="Gradle.FileParseTest.xlsxTest" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657918740638</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test">
+      <created>1657918958585</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657918958585</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test">
+      <created>1657918987082</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657918987082</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
