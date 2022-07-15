@@ -5,38 +5,43 @@ import com.codeborne.xlstest.XLS;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class FileParseTest {
+
+    String zipClassPath = "src/test/resources/Files.zip";
 
     @Test
     void pdfTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("");
+        ZipEntry zipEntry = zipFiles.getEntry("Дар.Владимир Набоков.pdf");
         InputStream inputStream = zipFiles.getInputStream(zipEntry);
         PDF pdf = new PDF(inputStream);
-        assertThat(pdf.text).contains("");
+        assertThat(pdf.text).contains("Дар");
     }
 
     @Test
     void xlsxTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("");
+        ZipEntry zipEntry = zipFiles.getEntry("Таблица.xlsx");
         InputStream inputStream = zipFiles.getInputStream(zipEntry);
         XLS xls = new XLS(inputStream);
         assertThat(xls.excel
-                .getSheetAt()
-                .getRow()
-                .getCell()
-                .getStringCellValue()).contains("");
+                .getSheetAt(0)
+                .getRow(3)
+                .getCell(2)
+                .getStringCellValue()).contains("строка3");
     }
 
     @Test
     void parseCsvTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("");
+        ZipEntry zipEntry = zipFiles.getEntry("Табличечка.csv");
         try (InputStream inputStream = zipFiles.getInputStream(zipEntry);
              CSVReader csv = new CSVReader(new InputStreamReader(inputStream))) {
             List<String[]> content = csv.readAll();
