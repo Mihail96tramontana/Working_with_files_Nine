@@ -7,7 +7,7 @@
     <list default="true" id="0dd22c38-6323-4f4a-9b15-75b2fe6ca4ed" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/guru/qa/FileParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Files.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/file.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <recent name="C:\Users\qwerty\IdeaProjects\Working_with_files_Nine\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FileParseTest.parseCsvTest">
+  <component name="RunManager" selected="Gradle.FileParseTest.pdfTest">
     <configuration name="FileParseTest.csvTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -184,8 +184,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.FileParseTest.parseCsvTest" />
         <item itemvalue="Gradle.FileParseTest.pdfTest" />
+        <item itemvalue="Gradle.FileParseTest.parseCsvTest" />
         <item itemvalue="Gradle.FileParseTest.csvTest" />
         <item itemvalue="Gradle.FileParseTest.parseJsonTest" />
         <item itemvalue="Gradle.FileParseTest.xlsxTest" />
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657914081038</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test">
+      <created>1657916954720</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657916954720</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,5 +274,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.zip.ZipException" package="java.util.zip" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

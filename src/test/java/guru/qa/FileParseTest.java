@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class FileParseTest {
 
-    String zipClassPath = "src/test/resources/file.zip";
+    String zipClassPath = "src/test/resources/files.zip";
     String jsonClassPath = "src/test/resources/student.json";
 
     @Test
@@ -50,7 +50,7 @@ public class FileParseTest {
         try (InputStream inputStream = zipFiles.getInputStream(zipEntry);
              CSVReader csv = new CSVReader(new InputStreamReader(inputStream))) {
             List<String[]> content = csv.readAll();
-            assertThat(content.get(3)).contains("номер3");
+            assertThat(content.get(1)).contains("name");
         }
     }
 
