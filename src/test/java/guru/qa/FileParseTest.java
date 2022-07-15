@@ -46,7 +46,7 @@ public class FileParseTest {
     @Test
     void parseCsvTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("Табличечка.csv");
+        ZipEntry zipEntry = zipFiles.getEntry("Файлик.csv");
         try (InputStream inputStream = zipFiles.getInputStream(zipEntry);
              CSVReader csv = new CSVReader(new InputStreamReader(inputStream))) {
             List<String[]> content = csv.readAll();
