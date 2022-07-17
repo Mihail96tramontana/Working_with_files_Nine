@@ -32,24 +32,25 @@ public class FileParseTest {
     @Test
     void xlsxTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("Таблица.xlsx");
+        ZipEntry zipEntry = zipFiles.getEntry("2.xlsx");
         InputStream inputStream = zipFiles.getInputStream(zipEntry);
         XLS xls = new XLS(inputStream);
         assertThat(xls.excel
                 .getSheetAt(0)
-                .getRow(3)
-                .getCell(2)
+                .getRow(2)
+                .getCell(1)
                 .getStringCellValue()).contains("строка3");
     }
 
     @Test
     void parseCsvTest() throws Exception {
         ZipFile zipFiles = new ZipFile(zipClassPath);
-        ZipEntry zipEntry = zipFiles.getEntry("Файлик.csv");
+        ZipEntry zipEntry = zipFiles.getEntry("3.csv");
         try (InputStream inputStream = zipFiles.getInputStream(zipEntry);
              CSVReader csv = new CSVReader(new InputStreamReader(inputStream))) {
             List<String[]> content = csv.readAll();
-            assertThat(content.get(1)).contains("name");
+            assertThat(content.get(0)).contains(new String[]{"1", "номер1"});
+
         }
     }
 
